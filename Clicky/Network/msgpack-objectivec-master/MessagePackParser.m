@@ -70,7 +70,6 @@
 	msgpack_unpacked msg;
 	msgpack_unpacked_init(&msg);
 	bool success = msgpack_unpack_next(&msg, data.bytes, data.length, NULL); // Parse it into C-land
-    NSLog(@"Unpack %@", success ? @"Worked":@"Failed");
 	id results = success ? [self createUnpackedObject:msg.data] : nil; // Convert from C-land to Obj-c-land
 	msgpack_unpacked_destroy(&msg); // Free the parser
 #if !__has_feature(objc_arc)

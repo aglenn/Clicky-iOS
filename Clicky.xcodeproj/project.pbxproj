@@ -42,6 +42,7 @@
 		241E87F218B658B8002BD8FB /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 241E87E318B658B8002BD8FB /* readme.md */; };
 		241E87F318B658B8002BD8FB /* RegionParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87E518B658B8002BD8FB /* RegionParseOperation.m */; };
 		241E87F718B65BC7002BD8FB /* skerseRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87F618B65BC7002BD8FB /* skerseRegionManager.m */; };
+		242F0EFA18BAF55B00AA620F /* skersePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F0EF918BAF55B00AA620F /* skersePlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		241E87F518B65BC7002BD8FB /* skerseRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseRegionManager.h; path = skerseRegionManager/skerseRegionManager.h; sourceTree = "<group>"; };
 		241E87F618B65BC7002BD8FB /* skerseRegionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseRegionManager.m; path = skerseRegionManager/skerseRegionManager.m; sourceTree = "<group>"; };
 		241E87F818B6C42B002BD8FB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Clicky/Constants.h; sourceTree = "<group>"; };
+		242F0EF818BAF55B00AA620F /* skersePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skersePlayer.h; path = skersePlayer/skersePlayer.h; sourceTree = "<group>"; };
+		242F0EF918BAF55B00AA620F /* skersePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skersePlayer.m; path = skersePlayer/skersePlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,7 @@
 		241E877B18B65622002BD8FB /* Clicky */ = {
 			isa = PBXGroup;
 			children = (
+				242F0EF718BAF53D00AA620F /* skersePlayer */,
 				241E87F418B65BAC002BD8FB /* skerseRegionManager */,
 				241E87BD18B658B8002BD8FB /* Network */,
 				241E87B618B6585D002BD8FB /* Model */,
@@ -330,6 +334,15 @@
 			name = skerseRegionManager;
 			sourceTree = "<group>";
 		};
+		242F0EF718BAF53D00AA620F /* skersePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				242F0EF818BAF55B00AA620F /* skersePlayer.h */,
+				242F0EF918BAF55B00AA620F /* skersePlayer.m */,
+			);
+			name = skersePlayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -439,6 +452,7 @@
 				241E87E818B658B8002BD8FB /* MessagePackParser+Streaming.m in Sources */,
 				241E87ED18B658B8002BD8FB /* vrefbuffer.c in Sources */,
 				241E87EC18B658B8002BD8FB /* version.c in Sources */,
+				242F0EFA18BAF55B00AA620F /* skersePlayer.m in Sources */,
 				241E87EA18B658B8002BD8FB /* objectc.c in Sources */,
 				241E87BC18B658AC002BD8FB /* Region.m in Sources */,
 				241E87BB18B658AC002BD8FB /* Pixel.m in Sources */,

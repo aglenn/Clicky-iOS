@@ -9,6 +9,6 @@
 #ifndef Clicky_Constants_h
 #define Clicky_Constants_h
 
-#define PSIZE 10
+#define PSIZE 50
 
 #endif

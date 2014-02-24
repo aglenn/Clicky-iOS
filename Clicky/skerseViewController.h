@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface skerseViewController : UIViewController
+@interface skerseViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

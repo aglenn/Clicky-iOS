@@ -9,6 +9,7 @@
 #import "skerseServerStreamCommunicator.h"
 #import "MessagePack.h"
 #import "RegionParseOperation.h"
+#import "skersePlayer.h"
 
 #define SERVER @"clicky.skerse.com"
 #define PORT 11000
@@ -24,6 +25,7 @@ static skerseServerStreamCommunicator *sharedCommunicator;
 @property NSMutableArray *dataToSend;
 @property NSOperationQueue *parseOperationQueue;
 @property int regionID;
+@property BOOL spaceAvailable;
 @end
 
 @implementation skerseServerStreamCommunicator
@@ -43,18 +45,19 @@ static skerseServerStreamCommunicator *sharedCommunicator;
 }
 
 +(skerseServerStreamCommunicator*)sharedCommunicator {
-    if (!sharedCommunicator) {
-        sharedCommunicator = [[skerseServerStreamCommunicator alloc] init];
+    @synchronized(self) {
+        if (!sharedCommunicator) {
+            sharedCommunicator = [[skerseServerStreamCommunicator alloc] init];
+        }
+        return sharedCommunicator;
     }
-    NSLog(@"Allocated streamcom");
-    return sharedCommunicator;
 }
 
 -(void)fetchRegion:(CGRect)rect {
     _regionID++;
     NSLog(@"Packing data");
     NSDictionary *dict = @{@"id":[NSString stringWithFormat:@"%d",_regionID],@"message_name":@"subscribe_region_nb", @"region":@{@"top_left":@[@((int)rect.origin.x),@((int)rect.origin.y)],@"bottom_right":@[@((int)rect.size.width + (int)rect.origin.x - 1),@((int)rect.size.height + (int)rect.origin.y - 1)]}};
-    NSLog(@"Dict: %@", dict);
+    //NSLog(@"Dict: %@", dict);
     NSData* packed = [dict messagePack];
     
     uint32_t length = packed.length;
@@ -65,15 +68,43 @@ static skerseServerStreamCommunicator *sharedCommunicator;
     [d appendData:packed];
     
     [_dataToSend addObject:d];
+    [self send];
 }
 
+-(void)sendClick:(CGPoint)coordinate {
+    NSDictionary *dict = @{@"message_name":@"clicks", @"clicks":@[@{@"pixel":@[@(coordinate.x), @(coordinate.y)], @"name":@"iOS Client", @"red":@([skersePlayer currentPlayer].red), @"green":@([skersePlayer currentPlayer].green), @"blue":@([skersePlayer currentPlayer].blue), @"num":@(1)}]};
+    //NSLog(@"Dict: %@", dict);
+    NSData* packed = [dict messagePack];
+    
+    uint32_t length = packed.length;
+    uint32_t BIGlength = CFSwapInt32HostToBig(length);
+    
+    NSMutableData *d = [[NSMutableData alloc] init];
+    [d appendBytes:&BIGlength length:4];
+    [d appendData:packed];
+    
+    [_dataToSend addObject:d];
+    [self send];
+}
+
+/*
+ message_name: “clicks”
+ clicks:[{pixel:[x,y], name:’string of clicker’, red:num, green:num, blue:num, num: number of clicks},...]
+ }
+ 
+ (*/
+
 -(void)send {
-    NSLog(@"Going to send");
-    if (_dataToSend.count > 0) {
-        NSData *d = [_dataToSend firstObject];
-        [_outStream write:[d bytes] maxLength:[d length]];
-        NSLog(@"Sent %u bytes", d.length);
-        [_dataToSend removeObjectAtIndex:0];        
+    @synchronized(self) {
+    if (_spaceAvailable) {
+        if (_dataToSend.count > 0) {
+            NSData *d = [_dataToSend firstObject];
+            [_outStream write:[d bytes] maxLength:[d length]];
+            NSLog(@"Sent %u bytes", d.length);
+            [_dataToSend removeObjectAtIndex:0];
+            _spaceAvailable = NO;
+        }
+    }
     }
 }
 
@@ -139,15 +170,21 @@ static skerseServerStreamCommunicator *sharedCommunicator;
                         if (_readSize == _currentSize) {
                             // unpack that shit
                             NSLog(@"Parsing %u bytes", _inData.length);
-                            id parsed = [[_inData subdataWithRange:NSMakeRange(0, _currentSize)] messagePackParse];
-                            NSLog(@"%@", [parsed class]);
+                            NSDictionary *parsed = [[_inData subdataWithRange:NSMakeRange(0, _currentSize)] messagePackParse];
                             
-                            RegionParseOperation *rPO = [[RegionParseOperation alloc] initWithDictionary:(NSDictionary*)parsed];
-                            [_parseOperationQueue addOperation:rPO];
+                            NSLog(@"Result: %@", parsed);
+                            NSString *messageName = [parsed objectForKey:@"message_name"];
+                            if ([messageName isEqualToString:@"region"]) {
+                                RegionParseOperation *rPO = [[RegionParseOperation alloc] initWithDictionary:parsed];
+                                [_parseOperationQueue addOperation:rPO];
+                            }
+                            else {
+                                NSLog(@"Got unknown message: %@", messageName);
+                            }
                             
                             _readSize = 0;
                             _currentSize = 0;
-                            _inData = nil;
+                            _inData = nil;                            
                         }
                         else {
                             NSLog(@"Tried to parse, but I have %u bytes, and I need %u", _readSize, _currentSize);
@@ -169,9 +206,10 @@ static skerseServerStreamCommunicator *sharedCommunicator;
         }
     }
     else {
-        //NSLog(@"Handling  out event %d", eventCode);
+        NSLog(@"Handling  out event %d", eventCode);
         switch(eventCode) {
             case NSStreamEventHasSpaceAvailable:
+                _spaceAvailable = YES;
                 [self send];
                 break;
             case NSStreamEventErrorOccurred:

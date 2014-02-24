@@ -13,5 +13,6 @@
 +(skerseServerStreamCommunicator*)sharedCommunicator;
 
 -(void)fetchRegion:(CGRect)rect;
+-(void)sendClick:(CGPoint)coordinate;
 
 @end

@@ -14,5 +14,7 @@
 @property Pixel *pixel;
 
 -(skerseSKPixel*)initWithPixel:(Pixel*)pixel position:(CGPoint) position;
+-(void)hideLabel;
+-(void)showLabel;
 
 @end

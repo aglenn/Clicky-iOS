@@ -29,19 +29,21 @@
 }
 
 -(void)loadPixels:(NSArray*)pixels {
+    int pIndex = 0;
     for (int i=0; i<self.ySize; i++) {
         NSMutableArray *row = [[NSMutableArray alloc] init];
         for (int j=0; j<self.xSize; j++) {
             NSDictionary *pixel = pixels[i*self.xSize + j];
             Pixel *p = [[Pixel alloc] init];
-            [p setDefense:[[pixel objectForKey:@"defense"] unsignedIntValue]];
-            
-            NSArray *colors = [pixel objectForKey:@"rgb"];
-            [p setRed:[colors[0] unsignedIntValue]];
-            [p setGreen:[colors[1] unsignedIntValue]];
-            [p setBlue:[colors[2] unsignedIntValue]];
+            [p setDefense:0];
+
+            [p setRed:[pixels[pIndex] unsignedIntValue]];
+            [p setGreen:[pixels[pIndex + 1] unsignedIntValue]];
+            [p setBlue:[pixels[pIndex + 2] unsignedIntValue]];
             
             [row addObject:p];
+            
+            pIndex += 3;
         }
         [_pixels addObject:row];
     }

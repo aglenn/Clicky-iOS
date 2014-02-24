@@ -21,10 +21,12 @@ static skerseRegionManager *sharedManager =  nil;
 }
 
 +(skerseRegionManager*)sharedManager {
-    if (!sharedManager) {
-        sharedManager = [[skerseRegionManager alloc] init];
+    @synchronized(self) {
+        if (!sharedManager) {
+            sharedManager = [[skerseRegionManager alloc] init];
+        }
+        return sharedManager;
     }
-    return sharedManager;
 }
 
 @end
