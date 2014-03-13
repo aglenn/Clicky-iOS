@@ -697,6 +697,7 @@
 				INFOPLIST_FILE = "Clicky Tests/Clicky Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "150358D4-20DA-433A-80A7-C8D3246BCBEE";
+				SUPPORTED_PLATFORMS = iphonesimulator;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -719,6 +720,7 @@
 				INFOPLIST_FILE = "Clicky Tests/Clicky Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "150358D4-20DA-433A-80A7-C8D3246BCBEE";
+				SUPPORTED_PLATFORMS = iphonesimulator;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
