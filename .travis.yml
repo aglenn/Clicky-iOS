@@ -1,3 +1,14 @@
 language: objective-c
-xcode_project: Clicky.xcodeproj # path to your xcodeproj folder
+xcode_project: Clicky.xcodeproj
 xcode_scheme: Clicky
+before_script:
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisTest.mobileprovision.enc -d -a -out scripts/profile/TravisTest.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
+env:
+  global:
+  - APP_NAME="Clicky"
+  - DEVELOPER_NAME="iPhone Distribution: Findaway World (LW8G2YK29M)"
+  - PROFILE_NAME="TravisTest"
+  - secure: HBUE5DOHmSGUquJSXpPr9cXpxK6v+5zTmZcJiLfwhfJgZR+ky8ML5sF1FqfbPe05c/trSrdLvOLDTaisM8UyRcukMIJoaqI2TpHTxdYXD0IMIi2A3xMfg2HreJ2NQO1lLsFkFueAseXRzYKKCeG2AahyT+DxPbtWQLMWfWZQor0=
+  - secure: SK6EdMeSpVJDuhXHMrwBJ+MY8jTAMp1NmoAjE5vPX6ZGG3nRgMaKrRK8aYRdyoCHF5rZepywcStoP4QcawUALgPjaYR4ap6HDhiD830bQeMGp2R6vHvyltYioW8qBHTRtpr++JLr29TRSdU9GxGEmIisw0dAgXudvKnZEuPO8sI=
