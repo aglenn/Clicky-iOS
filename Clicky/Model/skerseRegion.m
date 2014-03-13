@@ -33,17 +33,19 @@
     for (int i=0; i<self.ySize; i++) {
         NSMutableArray *row = [[NSMutableArray alloc] init];
         for (int j=0; j<self.xSize; j++) {
-            NSDictionary *pixel = pixels[i*self.xSize + j];
-            skersePixel *p = [[skersePixel alloc] init];
-            [p setDefense:0];
-
-            [p setRed:[pixels[pIndex] unsignedIntValue]];
-            [p setGreen:[pixels[pIndex + 1] unsignedIntValue]];
-            [p setBlue:[pixels[pIndex + 2] unsignedIntValue]];
-            
-            [row addObject:p];
-            
-            pIndex += 3;
+            if (pIndex+2 <= pixels.count-1) {
+                NSDictionary *pixel = pixels[i*self.xSize + j];
+                skersePixel *p = [[skersePixel alloc] init];
+                [p setDefense:0];
+                
+                [p setRed:[pixels[pIndex] unsignedIntValue]];
+                [p setGreen:[pixels[pIndex + 1] unsignedIntValue]];
+                [p setBlue:[pixels[pIndex + 2] unsignedIntValue]];
+                
+                [row addObject:p];
+                
+                pIndex += 3;
+            }
         }
         [_pixels addObject:row];
     }
