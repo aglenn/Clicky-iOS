@@ -12,12 +12,12 @@ static skersePlayer *currentPlayer = nil;
 
 @implementation skersePlayer
 
--(skersePlayer*)init {
+-(skersePlayer*)initWithRed:(uint8_t)r green:(uint8_t)g blue:(uint8_t)b {
     self = [super init];
     if (self) {
-        [self setRed:200];
-        [self setGreen:184];
-        [self setBlue:2];
+        [self setRed:r];
+        [self setGreen:g];
+        [self setBlue:b];
     }
     return self;
 }
@@ -25,7 +25,12 @@ static skersePlayer *currentPlayer = nil;
 +(skersePlayer*)currentPlayer {
     @synchronized(self) {
         if (!currentPlayer) {
-            currentPlayer = [[skersePlayer alloc] init];
+            #if TARGET_IPHONE_SIMULATOR
+            currentPlayer = [[skersePlayer alloc] initWithRed:2 green:184 blue:200];
+            #else
+            currentPlayer = [[skersePlayer alloc] initWithRed:200 green:184 blue:2];
+            currentPlayer = [[skersePlayer alloc] initWithRed:255 green:0 blue:0];
+            #endif
         }
         return currentPlayer;
     }

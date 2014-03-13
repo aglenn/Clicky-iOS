@@ -1,14 +1,14 @@
 //
 //  Pixel.m
-//  RegionTest
+//  Clicky
 //
 //  Created by Alexander Glenn on 2/19/14.
 //  Copyright (c) 2014 Skerse Productions. All rights reserved.
 //
 
-#import "Pixel.h"
+#import "skersePixel.h"
 
-@implementation Pixel
+@implementation skersePixel
 
 -(void)setRed:(uint8_t)red {
     _red = red;

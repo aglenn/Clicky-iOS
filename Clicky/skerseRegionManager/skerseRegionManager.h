@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class Region;
+@class skerseRegion;
 
 @interface skerseRegionManager : NSObject
 
-@property NSMutableArray *regions;
+@property (readonly) NSMutableArray *regions;
 
 +(skerseRegionManager*)sharedManager;
--(Region*)regionForID:(uint32_t)regionID;
+//-(skerseRegion*)regionForID:(uint32_t)regionID;
+-(void)beginRegionFetch;
+-(void)addRegion:(skerseRegion*) region;
 
 @end

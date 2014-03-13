@@ -1,17 +1,17 @@
 //
-//  Region.m
-//  RegionTest
+//  skerseRegion.m
+//  Clicky
 //
 //  Created by Alexander Glenn on 2/19/14.
 //  Copyright (c) 2014 Skerse Productions. All rights reserved.
 //
 
-#import "Region.h"
-#import "Pixel.h"
+#import "skerseRegion.h"
+#import "skersePixel.h"
 
-@implementation Region
+@implementation skerseRegion
 
--(Region*)init {
+-(skerseRegion*)init {
     self = [super init];
     if (self) {
         _pixels = [[NSMutableArray alloc] init];
@@ -19,7 +19,7 @@
     return self;
 }
 
--(Region*)initWithID:(uint32_t)rID {
+-(skerseRegion*)initWithID:(uint32_t)rID {
     self = [super init];
     if (self) {
         _regionID = rID;
@@ -34,7 +34,7 @@
         NSMutableArray *row = [[NSMutableArray alloc] init];
         for (int j=0; j<self.xSize; j++) {
             NSDictionary *pixel = pixels[i*self.xSize + j];
-            Pixel *p = [[Pixel alloc] init];
+            skersePixel *p = [[skersePixel alloc] init];
             [p setDefense:0];
 
             [p setRed:[pixels[pIndex] unsignedIntValue]];
@@ -46,6 +46,19 @@
             pIndex += 3;
         }
         [_pixels addObject:row];
+    }
+    
+}
+
+-(void)addDefense:(NSArray*)defense {
+    // Get defense
+    for (NSArray *d in defense) {
+        uint32_t x = [d[0] unsignedIntValue];
+        uint32_t y = [d[1] unsignedIntValue];
+        uint16_t def =[d[2] unsignedIntValue];
+        
+        skersePixel *p = ((NSArray*)self.pixels[y - self.yOrigin])[x - self.xOrigin];
+        [p setDefense:def];
     }
 }
 

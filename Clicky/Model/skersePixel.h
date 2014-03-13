@@ -1,6 +1,6 @@
 //
-//  Pixel.h
-//  RegionTest
+//  skersePixel.h
+//  Clicky
 //
 //  Created by Alexander Glenn on 2/19/14.
 //  Copyright (c) 2014 Skerse Productions. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Pixel : NSObject
+@interface skersePixel : NSObject
 
 @property (nonatomic) uint8_t red;
 @property (nonatomic) uint8_t green;

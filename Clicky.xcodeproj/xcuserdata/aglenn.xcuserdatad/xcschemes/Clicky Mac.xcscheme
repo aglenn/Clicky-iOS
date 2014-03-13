@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "241E876F18B65622002BD8FB"
-               BuildableName = "Clicky.app"
-               BlueprintName = "Clicky"
+               BlueprintIdentifier = "245892FF18BF910800C8A4C3"
+               BuildableName = "Clicky Mac.app"
+               BlueprintName = "Clicky Mac"
                ReferencedContainer = "container:Clicky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,33 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "241E879A18B65622002BD8FB"
-               BuildableName = "ClickyTests.xctest"
-               BlueprintName = "ClickyTests"
-               ReferencedContainer = "container:Clicky.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2458932318BF910900C8A4C3"
-               BuildableName = "Clicky MacTests.xctest"
-               BlueprintName = "Clicky MacTests"
-               ReferencedContainer = "container:Clicky.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "241E876F18B65622002BD8FB"
-            BuildableName = "Clicky.app"
-            BlueprintName = "Clicky"
+            BlueprintIdentifier = "245892FF18BF910800C8A4C3"
+            BuildableName = "Clicky Mac.app"
+            BlueprintName = "Clicky Mac"
             ReferencedContainer = "container:Clicky.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "241E876F18B65622002BD8FB"
-            BuildableName = "Clicky.app"
-            BlueprintName = "Clicky"
+            BlueprintIdentifier = "245892FF18BF910800C8A4C3"
+            BuildableName = "Clicky Mac.app"
+            BlueprintName = "Clicky Mac"
             ReferencedContainer = "container:Clicky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -89,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "241E876F18B65622002BD8FB"
-            BuildableName = "Clicky.app"
-            BlueprintName = "Clicky"
+            BlueprintIdentifier = "245892FF18BF910800C8A4C3"
+            BuildableName = "Clicky Mac.app"
+            BlueprintName = "Clicky Mac"
             ReferencedContainer = "container:Clicky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

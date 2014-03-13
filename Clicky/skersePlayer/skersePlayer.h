@@ -17,4 +17,6 @@
 
 +(skersePlayer*)currentPlayer;
 
+-(skersePlayer*)initWithRed:(uint8_t)r green:(uint8_t)g blue:(uint8_t)b;
+
 @end

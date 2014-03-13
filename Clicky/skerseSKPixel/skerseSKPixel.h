@@ -8,13 +8,16 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@class Pixel;
+@class skersePixel;
+@class skersePlayer;
 
 @interface skerseSKPixel : SKSpriteNode
-@property Pixel *pixel;
+@property skersePixel *pixel;
 
--(skerseSKPixel*)initWithPixel:(Pixel*)pixel position:(CGPoint) position;
+-(skerseSKPixel*)initWithPixel:(skersePixel*)pixel position:(CGPoint) position;
 -(void)hideLabel;
 -(void)showLabel;
+
+-(void)wasClickedByPlayer:(skersePlayer*)player;
 
 @end

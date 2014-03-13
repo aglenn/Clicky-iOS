@@ -8,8 +8,8 @@
 
 #import "skerseMyScene.h"
 #import "skerseRegionManager.h"
-#import "Region.h"
-#import "Pixel.h"
+#import "skerseRegion.h"
+#import "skersePixel.h"
 #import "skerseSKPixel.h"
 
 #import "Constants.h"
@@ -17,6 +17,7 @@
 @interface skerseMyScene()
 @property BOOL labelsVisible;
 @property BOOL updating;
+@property SKNode *world;
 @end
 
 @implementation skerseMyScene
@@ -29,8 +30,21 @@
 
         _labelsVisible = YES;
         _updating = NO;
+        
+        _world = [SKNode node];
+        [self addChild:_world];
+        
+        
+        _camera = [SKNode node];
+        _camera.name = @"camera";
+        [_world addChild:_camera];
     }
     return self;
+}
+
+-(void)setWorldScale:(float)worldScale {
+    _worldScale = worldScale;
+    [_world setScale:worldScale];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -40,12 +54,14 @@
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if (!_updating) {
-        if (self.sceneScale < .7) {//3.5) {
+        if (self.worldScale < .7) {//3.5) {
             if (_labelsVisible) {
                 //hide all labels
                 
-                for (id child in self.children) {
-                    [(skerseSKPixel*)child hideLabel];
+                for (id child in _world.children) {
+                    if ([child isKindOfClass:[skerseSKPixel class]]) {
+                        [(skerseSKPixel*)child hideLabel];
+                    }
                 }
                 _labelsVisible = NO;
             }
@@ -54,8 +70,10 @@
             if (!_labelsVisible) {
                 //show all labels
                 
-                for (id child in self.children) {
-                    [(skerseSKPixel*)child showLabel];
+                for (id child in _world.children) {
+                    if ([child isKindOfClass:[skerseSKPixel class]]) {
+                        [(skerseSKPixel*)child showLabel];
+                    }
                 }
                 _labelsVisible = YES;
             }
@@ -63,29 +81,57 @@
     }
 }
 
--(void)updateRegions {
-    NSLog(@"Updating the regions");
+- (void)didSimulatePhysics
+{
+    [self centerOnNode: [self childNodeWithName: @"//camera"]];
+}
+
+- (void) centerOnNode: (SKNode *) node
+{
+    CGPoint cameraPositionInScene = [node.scene convertPoint:node.position fromNode:node.parent];
+    node.parent.position = CGPointMake(node.parent.position.x - cameraPositionInScene.x, node.parent.position.y - cameraPositionInScene.y);
+}
+
+
+-(void)addRegion:(NSNotification*) n {
+    //NSLog(@"Updating the regions");
     @synchronized(self ) {
         _updating = YES;
-        [self removeAllChildren];
-        for (int rg=0;rg<[skerseRegionManager sharedManager].regions.count;rg++) {
-            Region *r = [skerseRegionManager sharedManager].regions[rg];
-            for (int i=0; i<r.ySize; i++) {
-                NSArray *row = r.pixels[i];
-                for (int j=0; j<r.xSize; j++) {
-                    Pixel *p = row[j];
-                    skerseSKPixel *sKP = [[skerseSKPixel alloc] initWithPixel:p position:CGPointMake((r.xOrigin + j), (r.yOrigin + i))];
-                    [self addChild:sKP];
-                    /*
-                    if (self.sceneScale < 3.5) {
-                        [sKP hideLabel];
-                    }
-                     */
+        uint32_t regionID = [[n.userInfo objectForKey:@"RegionID"] unsignedIntValue];
+        skerseRegion *r = [skerseRegionManager sharedManager].regions[regionID];
+        for (int i=0; i<r.ySize; i++) {
+            NSArray *row = r.pixels[i];
+            for (int j=0; j<r.xSize; j++) {
+                skersePixel *p = row[j];
+                skerseSKPixel *sKP = [[skerseSKPixel alloc] initWithPixel:p position:CGPointMake((r.xOrigin + j), (r.yOrigin + i))];
+                [sKP setName:[NSString stringWithFormat:@"(%d,%d)", j, i]];
+                [_world addChild:sKP];
+                if (self.worldScale < .7) {
+                    [sKP hideLabel];
                 }
             }
         }
         _updating = NO;
     }
+}
+
+-(void)handleClick:(NSNotification*)n {
+    
+    uint32_t rID = [[n.userInfo objectForKey:@"rID"] unsignedIntValue];
+    skersePixel *p = [n.userInfo objectForKey:@"pixel"];
+    
+    skerseRegion *r = [skerseRegionManager sharedManager].regions[rID];
+    
+    uint32_t x = [[n.userInfo objectForKey:@"x"] unsignedIntValue] - r.xOrigin;
+    uint32_t y = [[n.userInfo objectForKey:@"y"] unsignedIntValue] - r.yOrigin;
+    
+    NSLog(@"handling click for region %d, (%d,%d)", rID, x, y);
+    
+    [r.pixels[y] replaceObjectAtIndex:x withObject:p];
+    
+    skerseSKPixel *pixel = (skerseSKPixel*)[self.world childNodeWithName:[NSString stringWithFormat:@"(%d,%d)", x, y]];
+    NSLog(@"tried to get skpixel, it %@", pixel ? @"Exists":@"Doesnt exist");
+    [pixel setPixel:p];
 }
 
 @end

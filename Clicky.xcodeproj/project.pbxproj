@@ -25,8 +25,8 @@
 		241E87A718B65622002BD8FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 241E87A518B65622002BD8FB /* InfoPlist.strings */; };
 		241E87A918B65622002BD8FB /* ClickyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87A818B65622002BD8FB /* ClickyTests.m */; };
 		241E87B518B65848002BD8FB /* skerseSKPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87B418B65848002BD8FB /* skerseSKPixel.m */; };
-		241E87BB18B658AC002BD8FB /* Pixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87B818B658AC002BD8FB /* Pixel.m */; };
-		241E87BC18B658AC002BD8FB /* Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87BA18B658AC002BD8FB /* Region.m */; };
+		241E87BB18B658AC002BD8FB /* skersePixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87B818B658AC002BD8FB /* skersePixel.m */; };
+		241E87BC18B658AC002BD8FB /* skerseRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87BA18B658AC002BD8FB /* skerseRegion.m */; };
 		241E87E618B658B8002BD8FB /* skerseServerStreamCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87BF18B658B8002BD8FB /* skerseServerStreamCommunicator.m */; };
 		241E87E718B658B8002BD8FB /* MessagePackPacker.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87C318B658B8002BD8FB /* MessagePackPacker.m */; };
 		241E87E818B658B8002BD8FB /* MessagePackParser+Streaming.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87C518B658B8002BD8FB /* MessagePackParser+Streaming.m */; };
@@ -40,9 +40,12 @@
 		241E87F018B658B8002BD8FB /* NSData+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87E018B658B8002BD8FB /* NSData+MessagePack.m */; };
 		241E87F118B658B8002BD8FB /* NSDictionary+MessagePack.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87E218B658B8002BD8FB /* NSDictionary+MessagePack.m */; };
 		241E87F218B658B8002BD8FB /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 241E87E318B658B8002BD8FB /* readme.md */; };
-		241E87F318B658B8002BD8FB /* RegionParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87E518B658B8002BD8FB /* RegionParseOperation.m */; };
+		241E87F318B658B8002BD8FB /* skerseRegionParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87E518B658B8002BD8FB /* skerseRegionParseOperation.m */; };
 		241E87F718B65BC7002BD8FB /* skerseRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87F618B65BC7002BD8FB /* skerseRegionManager.m */; };
 		242F0EFA18BAF55B00AA620F /* skersePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F0EF918BAF55B00AA620F /* skersePlayer.m */; };
+		246F5C0E18BB8B2C0034AED1 /* skerseClickParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C0D18BB8B2C0034AED1 /* skerseClickParseOperation.m */; };
+		246F5C1118BB9D610034AED1 /* skerseGameInfoParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C1018BB9D610034AED1 /* skerseGameInfoParseOperation.m */; };
+		246F5C1518BB9E630034AED1 /* skerseGameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C1418BB9E630034AED1 /* skerseGameInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +84,10 @@
 		241E87A818B65622002BD8FB /* ClickyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickyTests.m; sourceTree = "<group>"; };
 		241E87B318B65848002BD8FB /* skerseSKPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseSKPixel.h; path = skerseSKPixel/skerseSKPixel.h; sourceTree = "<group>"; };
 		241E87B418B65848002BD8FB /* skerseSKPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseSKPixel.m; path = skerseSKPixel/skerseSKPixel.m; sourceTree = "<group>"; };
-		241E87B718B658AC002BD8FB /* Pixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pixel.h; path = Model/Pixel.h; sourceTree = "<group>"; };
-		241E87B818B658AC002BD8FB /* Pixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pixel.m; path = Model/Pixel.m; sourceTree = "<group>"; };
-		241E87B918B658AC002BD8FB /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Region.h; path = Model/Region.h; sourceTree = "<group>"; };
-		241E87BA18B658AC002BD8FB /* Region.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Region.m; path = Model/Region.m; sourceTree = "<group>"; };
+		241E87B718B658AC002BD8FB /* skersePixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skersePixel.h; path = Model/skersePixel.h; sourceTree = "<group>"; };
+		241E87B818B658AC002BD8FB /* skersePixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skersePixel.m; path = Model/skersePixel.m; sourceTree = "<group>"; };
+		241E87B918B658AC002BD8FB /* skerseRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseRegion.h; path = Model/skerseRegion.h; sourceTree = "<group>"; };
+		241E87BA18B658AC002BD8FB /* skerseRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseRegion.m; path = Model/skerseRegion.m; sourceTree = "<group>"; };
 		241E87BE18B658B8002BD8FB /* skerseServerStreamCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skerseServerStreamCommunicator.h; sourceTree = "<group>"; };
 		241E87BF18B658B8002BD8FB /* skerseServerStreamCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skerseServerStreamCommunicator.m; sourceTree = "<group>"; };
 		241E87C118B658B8002BD8FB /* MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagePack.h; sourceTree = "<group>"; };
@@ -120,13 +123,23 @@
 		241E87E118B658B8002BD8FB /* NSDictionary+MessagePack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MessagePack.h"; sourceTree = "<group>"; };
 		241E87E218B658B8002BD8FB /* NSDictionary+MessagePack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MessagePack.m"; sourceTree = "<group>"; };
 		241E87E318B658B8002BD8FB /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
-		241E87E418B658B8002BD8FB /* RegionParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionParseOperation.h; sourceTree = "<group>"; };
-		241E87E518B658B8002BD8FB /* RegionParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionParseOperation.m; sourceTree = "<group>"; };
+		241E87E418B658B8002BD8FB /* skerseRegionParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skerseRegionParseOperation.h; sourceTree = "<group>"; };
+		241E87E518B658B8002BD8FB /* skerseRegionParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skerseRegionParseOperation.m; sourceTree = "<group>"; };
 		241E87F518B65BC7002BD8FB /* skerseRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseRegionManager.h; path = skerseRegionManager/skerseRegionManager.h; sourceTree = "<group>"; };
 		241E87F618B65BC7002BD8FB /* skerseRegionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseRegionManager.m; path = skerseRegionManager/skerseRegionManager.m; sourceTree = "<group>"; };
 		241E87F818B6C42B002BD8FB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Clicky/Constants.h; sourceTree = "<group>"; };
 		242F0EF818BAF55B00AA620F /* skersePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skersePlayer.h; path = skersePlayer/skersePlayer.h; sourceTree = "<group>"; };
 		242F0EF918BAF55B00AA620F /* skersePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skersePlayer.m; path = skersePlayer/skersePlayer.m; sourceTree = "<group>"; };
+		2458930118BF910800C8A4C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2458930518BF910800C8A4C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2458930618BF910800C8A4C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2458930718BF910800C8A4C3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		246F5C0C18BB8B2C0034AED1 /* skerseClickParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skerseClickParseOperation.h; sourceTree = "<group>"; };
+		246F5C0D18BB8B2C0034AED1 /* skerseClickParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skerseClickParseOperation.m; sourceTree = "<group>"; };
+		246F5C0F18BB9D610034AED1 /* skerseGameInfoParseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = skerseGameInfoParseOperation.h; sourceTree = "<group>"; };
+		246F5C1018BB9D610034AED1 /* skerseGameInfoParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skerseGameInfoParseOperation.m; sourceTree = "<group>"; };
+		246F5C1318BB9E630034AED1 /* skerseGameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseGameInfo.h; path = skerseGameInfo/skerseGameInfo.h; sourceTree = "<group>"; };
+		246F5C1418BB9E630034AED1 /* skerseGameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseGameInfo.m; path = skerseGameInfo/skerseGameInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +195,8 @@
 				241E877718B65622002BD8FB /* UIKit.framework */,
 				241E877918B65622002BD8FB /* SpriteKit.framework */,
 				241E879C18B65622002BD8FB /* XCTest.framework */,
+				2458930118BF910800C8A4C3 /* Cocoa.framework */,
+				2458930418BF910800C8A4C3 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,6 +204,7 @@
 		241E877B18B65622002BD8FB /* Clicky */ = {
 			isa = PBXGroup;
 			children = (
+				246F5C1218BB9E4F0034AED1 /* skerseGameInfo */,
 				242F0EF718BAF53D00AA620F /* skersePlayer */,
 				241E87F418B65BAC002BD8FB /* skerseRegionManager */,
 				241E87BD18B658B8002BD8FB /* Network */,
@@ -249,10 +265,10 @@
 		241E87B618B6585D002BD8FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				241E87B718B658AC002BD8FB /* Pixel.h */,
-				241E87B818B658AC002BD8FB /* Pixel.m */,
-				241E87B918B658AC002BD8FB /* Region.h */,
-				241E87BA18B658AC002BD8FB /* Region.m */,
+				241E87B718B658AC002BD8FB /* skersePixel.h */,
+				241E87B818B658AC002BD8FB /* skersePixel.m */,
+				241E87B918B658AC002BD8FB /* skerseRegion.h */,
+				241E87BA18B658AC002BD8FB /* skerseRegion.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -263,8 +279,12 @@
 				241E87BE18B658B8002BD8FB /* skerseServerStreamCommunicator.h */,
 				241E87BF18B658B8002BD8FB /* skerseServerStreamCommunicator.m */,
 				241E87C018B658B8002BD8FB /* msgpack-objectivec-master */,
-				241E87E418B658B8002BD8FB /* RegionParseOperation.h */,
-				241E87E518B658B8002BD8FB /* RegionParseOperation.m */,
+				241E87E418B658B8002BD8FB /* skerseRegionParseOperation.h */,
+				241E87E518B658B8002BD8FB /* skerseRegionParseOperation.m */,
+				246F5C0C18BB8B2C0034AED1 /* skerseClickParseOperation.h */,
+				246F5C0D18BB8B2C0034AED1 /* skerseClickParseOperation.m */,
+				246F5C0F18BB9D610034AED1 /* skerseGameInfoParseOperation.h */,
+				246F5C1018BB9D610034AED1 /* skerseGameInfoParseOperation.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -341,6 +361,25 @@
 				242F0EF918BAF55B00AA620F /* skersePlayer.m */,
 			);
 			name = skersePlayer;
+			sourceTree = "<group>";
+		};
+		2458930418BF910800C8A4C3 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2458930518BF910800C8A4C3 /* AppKit.framework */,
+				2458930618BF910800C8A4C3 /* CoreData.framework */,
+				2458930718BF910800C8A4C3 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		246F5C1218BB9E4F0034AED1 /* skerseGameInfo */ = {
+			isa = PBXGroup;
+			children = (
+				246F5C1318BB9E630034AED1 /* skerseGameInfo.h */,
+				246F5C1418BB9E630034AED1 /* skerseGameInfo.m */,
+			);
+			name = skerseGameInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,17 +486,20 @@
 				241E87E918B658B8002BD8FB /* MessagePackParser.m in Sources */,
 				241E87E718B658B8002BD8FB /* MessagePackPacker.m in Sources */,
 				241E87E618B658B8002BD8FB /* skerseServerStreamCommunicator.m in Sources */,
+				246F5C0E18BB8B2C0034AED1 /* skerseClickParseOperation.m in Sources */,
 				241E87EE18B658B8002BD8FB /* zone.c in Sources */,
-				241E87F318B658B8002BD8FB /* RegionParseOperation.m in Sources */,
+				241E87F318B658B8002BD8FB /* skerseRegionParseOperation.m in Sources */,
 				241E87E818B658B8002BD8FB /* MessagePackParser+Streaming.m in Sources */,
 				241E87ED18B658B8002BD8FB /* vrefbuffer.c in Sources */,
 				241E87EC18B658B8002BD8FB /* version.c in Sources */,
 				242F0EFA18BAF55B00AA620F /* skersePlayer.m in Sources */,
 				241E87EA18B658B8002BD8FB /* objectc.c in Sources */,
-				241E87BC18B658AC002BD8FB /* Region.m in Sources */,
-				241E87BB18B658AC002BD8FB /* Pixel.m in Sources */,
+				241E87BC18B658AC002BD8FB /* skerseRegion.m in Sources */,
+				241E87BB18B658AC002BD8FB /* skersePixel.m in Sources */,
 				241E87EB18B658B8002BD8FB /* unpack.c in Sources */,
 				241E878F18B65622002BD8FB /* skerseViewController.m in Sources */,
+				246F5C1518BB9E630034AED1 /* skerseGameInfo.m in Sources */,
+				246F5C1118BB9D610034AED1 /* skerseGameInfoParseOperation.m in Sources */,
 				241E87B518B65848002BD8FB /* skerseSKPixel.m in Sources */,
 				241E878218B65622002BD8FB /* main.m in Sources */,
 				241E878618B65622002BD8FB /* skerseAppDelegate.m in Sources */,

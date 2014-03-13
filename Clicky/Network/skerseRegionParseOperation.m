@@ -1,22 +1,22 @@
 //
 //  RegionParseOperation.m
-//  RegionTest
+//  Clicky
 //
 //  Created by Alexander Glenn on 2/19/14.
 //  Copyright (c) 2014 Skerse Productions. All rights reserved.
 //
 
-#import "RegionParseOperation.h"
-#import "Region.h"
+#import "skerseRegionParseOperation.h"
+#import "skerseRegion.h"
 #import "skerseRegionManager.h"
 
-@interface RegionParseOperation()
+@interface skerseRegionParseOperation()
 @property NSDictionary *dictionary;
 @end
 
-@implementation RegionParseOperation
+@implementation skerseRegionParseOperation
 
--(RegionParseOperation*)initWithDictionary:(NSDictionary*)d {
+-(skerseRegionParseOperation*)initWithDictionary:(NSDictionary*)d {
     self = [super init];
     if (self) {
         _dictionary = d;
@@ -27,8 +27,8 @@
 -(void)main {
     
     uint32_t rID = [[_dictionary objectForKey:@"id"] unsignedIntValue];
-    NSLog(@"Got id: %u", rID);
-    Region *r = [[Region alloc] initWithID:rID];
+    //NSLog(@"Got id: %u", rID);
+    skerseRegion *r = [[skerseRegion alloc] initWithID:rID];
     
     // pull origin and size
     NSDictionary *regionDict = [_dictionary objectForKey:@"region"];
@@ -38,14 +38,17 @@
     [r setYSize:([((NSArray*)[regionDict objectForKey:@"bottom_right"])[1] unsignedIntValue] - r.yOrigin) + 1];
     
     NSArray *pixels = [_dictionary objectForKey:@"pixels"];
-    NSLog(@"Pixels length: %d", pixels.count);
     [r loadPixels:pixels];
+    NSArray *defenses = [_dictionary objectForKey:@"defense"];
+    [r addDefense:defenses];
     
-    [[skerseRegionManager sharedManager].regions addObject:r];
+    [[skerseRegionManager sharedManager] addRegion:r];
     
-    dispatch_sync(dispatch_get_main_queue(),  ^{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"NewRegion" object:self userInfo:@{@"Region":r}];
+    dispatch_async(dispatch_get_main_queue(),  ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"NewRegion" object:self userInfo:@{@"RegionID":@(rID)}];
     });
+    _dictionary = nil;
+    regionDict = nil;
 }
 
 @end

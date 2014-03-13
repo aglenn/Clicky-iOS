@@ -9,6 +9,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface skerseMyScene : SKScene
-@property float sceneScale;
--(void)updateRegions;
+@property float worldScale;
+-(void)addRegion:(NSNotification*)n;
+-(void)handleClick:(NSNotification*)n;
+@property SKNode *camera;
 @end
