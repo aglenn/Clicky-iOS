@@ -32,26 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "241E879A18B65622002BD8FB"
-               BuildableName = "ClickyTests.xctest"
-               BlueprintName = "ClickyTests"
-               ReferencedContainer = "container:Clicky.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2458932318BF910900C8A4C3"
-               BuildableName = "Clicky MacTests.xctest"
-               BlueprintName = "Clicky MacTests"
-               ReferencedContainer = "container:Clicky.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "24DD9C6918D13524009D6CCF"
                BuildableName = "Clicky Tests.octest"
                BlueprintName = "Clicky Tests"
