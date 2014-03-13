@@ -1,6 +1,7 @@
 language: objective-c
 xcode_project: Clicky.xcodeproj
 xcode_scheme: Clicky
+xcode_sdk: iphonesimulator7.0
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisTest.mobileprovision.enc
   -d -a -out scripts/profile/TravisTest.mobileprovision
