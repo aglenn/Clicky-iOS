@@ -12,6 +12,7 @@
 #import "skersePixel.h"
 #import "skerseServerStreamCommunicator.h"
 #import "SenTestingKitAsync.h"
+#import "skersePlayer.h"
 
 @interface Clicky_Tests : SenTestCase
 
@@ -109,6 +110,18 @@
 
 -(void)regionFetched {
     STSuccess();
+}
+
+-(void)testPlayer {
+    skersePlayer *p = [[skersePlayer alloc] initWithRed:3 green:115 blue:65];
+    skersePlayer *p2 = [skersePlayer currentPlayer];
+    
+    [p setRed:115];
+    [p setGreen:6];
+    [p setBlue:34];
+    
+    STAssertNotNil(p, @"Player should not me nil");
+    STAssertNotNil(p2, @"Player should not me nil");
 }
 
 @end
