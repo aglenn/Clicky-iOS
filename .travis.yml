@@ -3,7 +3,14 @@ xcode_project: Clicky.xcodeproj
 xcode_scheme: Clicky
 xcode_sdk: iphonesimulator7.0
 before_install:
-  - sudo pip install cpp-coveralls --use-mirrors
+  - brew update
+  - brew install pyenv
+  - eval "$(pyenv init -)"
+  - pyenv install 2.7.6
+  - pyenv glocal 2.7.6
+  - pyenv rehash
+  - pip install cpp-coveralls
+  - pyenv rehash
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisTest.mobileprovision.enc
   -d -a -out scripts/profile/TravisTest.mobileprovision
