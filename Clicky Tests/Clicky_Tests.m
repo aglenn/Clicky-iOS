@@ -120,8 +120,11 @@
     [p setGreen:6];
     [p setBlue:34];
     
+    
+    
     STAssertNotNil(p, @"Player should not me nil");
     STAssertNotNil(p2, @"Player should not me nil");
+    STAssertNotNil([p playerID], @"Player ID should not be nil");
 }
 
 @end
