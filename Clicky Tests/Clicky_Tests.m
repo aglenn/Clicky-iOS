@@ -100,4 +100,15 @@
     STSuccess();
 }
 
+-(void)testRegionFetch {
+    skerseServerStreamCommunicator *sssC = [skerseServerStreamCommunicator sharedCommunicator];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(regionFetched) name:@"NewRegion" object:nil];
+    [sssC fetchRegion:CGRectMake(0, 0, 10, 10)];
+    STFailAfter(10, @"Hopefully it works after 10 secs");
+}
+
+-(void)regionFetched {
+    STSuccess();
+}
+
 @end
