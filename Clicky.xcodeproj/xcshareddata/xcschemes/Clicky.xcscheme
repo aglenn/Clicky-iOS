@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
    LastUpgradeVersion = "0500"
-   version = "1.3">
+   version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "rm -rf ${BUILT_PRODUCTS_DIR}&#10;touch ${BUILT_PRODUCTS_DIR}">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,9 +23,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "245892FF18BF910800C8A4C3"
-               BuildableName = "Clicky Mac.app"
-               BlueprintName = "Clicky Mac"
+               BlueprintIdentifier = "241E876F18B65622002BD8FB"
+               BuildableName = "Clicky.app"
+               BlueprintName = "Clicky"
                ReferencedContainer = "container:Clicky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -27,14 +36,42 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "$SRCROOT/coverage.sh&#10;echo $SRCROOT &gt; /Users/aglenn/output.txt&#10;which coveralls &gt;&gt; /Users/aglenn/output.txt&#10;coveralls &gt;&gt; /Users/aglenn/output.txt&#10;echo &quot;SOOMETHING&quot; &gt;&gt; /Users/aglenn/output.txt&#10;whoami &gt;&gt; /Users/aglenn/output.txt">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "241E876F18B65622002BD8FB"
+                     BuildableName = "Clicky.app"
+                     BlueprintName = "Clicky"
+                     ReferencedContainer = "container:Clicky.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "24DD9C6918D13524009D6CCF"
+               BuildableName = "Clicky Tests.octest"
+               BlueprintName = "Clicky Tests"
+               ReferencedContainer = "container:Clicky.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "245892FF18BF910800C8A4C3"
-            BuildableName = "Clicky Mac.app"
-            BlueprintName = "Clicky Mac"
+            BlueprintIdentifier = "241E876F18B65622002BD8FB"
+            BuildableName = "Clicky.app"
+            BlueprintName = "Clicky"
             ReferencedContainer = "container:Clicky.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,9 +88,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "245892FF18BF910800C8A4C3"
-            BuildableName = "Clicky Mac.app"
-            BlueprintName = "Clicky Mac"
+            BlueprintIdentifier = "241E876F18B65622002BD8FB"
+            BuildableName = "Clicky.app"
+            BlueprintName = "Clicky"
             ReferencedContainer = "container:Clicky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -69,9 +106,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "245892FF18BF910800C8A4C3"
-            BuildableName = "Clicky Mac.app"
-            BlueprintName = "Clicky Mac"
+            BlueprintIdentifier = "241E876F18B65622002BD8FB"
+            BuildableName = "Clicky.app"
+            BlueprintName = "Clicky"
             ReferencedContainer = "container:Clicky.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

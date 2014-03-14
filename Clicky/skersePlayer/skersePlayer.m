@@ -53,4 +53,8 @@ static skersePlayer *currentPlayer = nil;
     [self setPlayerColor:[UIColor colorWithRed:(float)self.red/(float)255 green:(float)self.green/(float)255 blue:(float)self.blue/(float)255 alpha:1.0]];
 }
 
+-(NSString*)playerID {
+    return [NSString stringWithFormat:@"%d_%d_%d", self.red, self.green, self.blue];
+}
+
 @end

@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Clicky Mac.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Clicky.xcscheme</key>
+		<key>Clicky.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -33,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>2458932318BF910900C8A4C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24DD9C6918D13524009D6CCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

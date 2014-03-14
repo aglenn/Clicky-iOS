@@ -19,11 +19,6 @@
 		241E878F18B65622002BD8FB /* skerseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E878E18B65622002BD8FB /* skerseViewController.m */; };
 		241E879218B65622002BD8FB /* skerseMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E879118B65622002BD8FB /* skerseMyScene.m */; };
 		241E879618B65622002BD8FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 241E879518B65622002BD8FB /* Images.xcassets */; };
-		241E879D18B65622002BD8FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E879C18B65622002BD8FB /* XCTest.framework */; };
-		241E879E18B65622002BD8FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E877318B65622002BD8FB /* Foundation.framework */; };
-		241E879F18B65622002BD8FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E877718B65622002BD8FB /* UIKit.framework */; };
-		241E87A718B65622002BD8FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 241E87A518B65622002BD8FB /* InfoPlist.strings */; };
-		241E87A918B65622002BD8FB /* ClickyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87A818B65622002BD8FB /* ClickyTests.m */; };
 		241E87B518B65848002BD8FB /* skerseSKPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87B418B65848002BD8FB /* skerseSKPixel.m */; };
 		241E87BB18B658AC002BD8FB /* skersePixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87B818B658AC002BD8FB /* skersePixel.m */; };
 		241E87BC18B658AC002BD8FB /* skerseRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87BA18B658AC002BD8FB /* skerseRegion.m */; };
@@ -43,13 +38,21 @@
 		241E87F318B658B8002BD8FB /* skerseRegionParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87E518B658B8002BD8FB /* skerseRegionParseOperation.m */; };
 		241E87F718B65BC7002BD8FB /* skerseRegionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 241E87F618B65BC7002BD8FB /* skerseRegionManager.m */; };
 		242F0EFA18BAF55B00AA620F /* skersePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F0EF918BAF55B00AA620F /* skersePlayer.m */; };
+		2440E96818D340A800F9E338 /* GTMCodeCoverageApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440E96718D340A800F9E338 /* GTMCodeCoverageApp.m */; };
+		2440E96A18D340B000F9E338 /* GTMCodeCoverageTestsST.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440E96918D340B000F9E338 /* GTMCodeCoverageTestsST.m */; };
+		2440E96D18D34D0A00F9E338 /* SenTestingKitAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440E96C18D34D0A00F9E338 /* SenTestingKitAsync.m */; };
 		246F5C0E18BB8B2C0034AED1 /* skerseClickParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C0D18BB8B2C0034AED1 /* skerseClickParseOperation.m */; };
 		246F5C1118BB9D610034AED1 /* skerseGameInfoParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C1018BB9D610034AED1 /* skerseGameInfoParseOperation.m */; };
 		246F5C1518BB9E630034AED1 /* skerseGameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C1418BB9E630034AED1 /* skerseGameInfo.m */; };
+		24DD9C6C18D13524009D6CCF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DD9C6B18D13524009D6CCF /* SenTestingKit.framework */; };
+		24DD9C6D18D13524009D6CCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E877318B65622002BD8FB /* Foundation.framework */; };
+		24DD9C6E18D13524009D6CCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 241E877718B65622002BD8FB /* UIKit.framework */; };
+		24DD9C7418D13524009D6CCF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24DD9C7218D13524009D6CCF /* InfoPlist.strings */; };
+		24DD9C7618D13524009D6CCF /* Clicky_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD9C7518D13524009D6CCF /* Clicky_Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		241E87A018B65622002BD8FB /* PBXContainerItemProxy */ = {
+		24DD9C7818D13524009D6CCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 241E876818B65622002BD8FB /* Project object */;
 			proxyType = 1;
@@ -77,11 +80,7 @@
 		241E879018B65622002BD8FB /* skerseMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = skerseMyScene.h; sourceTree = "<group>"; };
 		241E879118B65622002BD8FB /* skerseMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = skerseMyScene.m; sourceTree = "<group>"; };
 		241E879518B65622002BD8FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		241E879B18B65622002BD8FB /* ClickyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		241E879C18B65622002BD8FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		241E87A418B65622002BD8FB /* ClickyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClickyTests-Info.plist"; sourceTree = "<group>"; };
-		241E87A618B65622002BD8FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		241E87A818B65622002BD8FB /* ClickyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickyTests.m; sourceTree = "<group>"; };
 		241E87B318B65848002BD8FB /* skerseSKPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseSKPixel.h; path = skerseSKPixel/skerseSKPixel.h; sourceTree = "<group>"; };
 		241E87B418B65848002BD8FB /* skerseSKPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseSKPixel.m; path = skerseSKPixel/skerseSKPixel.m; sourceTree = "<group>"; };
 		241E87B718B658AC002BD8FB /* skersePixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skersePixel.h; path = Model/skersePixel.h; sourceTree = "<group>"; };
@@ -130,6 +129,11 @@
 		241E87F818B6C42B002BD8FB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = Clicky/Constants.h; sourceTree = "<group>"; };
 		242F0EF818BAF55B00AA620F /* skersePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skersePlayer.h; path = skersePlayer/skersePlayer.h; sourceTree = "<group>"; };
 		242F0EF918BAF55B00AA620F /* skersePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skersePlayer.m; path = skersePlayer/skersePlayer.m; sourceTree = "<group>"; };
+		2440E96618D340A800F9E338 /* GTMCodeCoverageApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMCodeCoverageApp.h; path = "Clicky Tests/GTMCodeCoverageApp.h"; sourceTree = SOURCE_ROOT; };
+		2440E96718D340A800F9E338 /* GTMCodeCoverageApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMCodeCoverageApp.m; path = "Clicky Tests/GTMCodeCoverageApp.m"; sourceTree = SOURCE_ROOT; };
+		2440E96918D340B000F9E338 /* GTMCodeCoverageTestsST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMCodeCoverageTestsST.m; sourceTree = "<group>"; };
+		2440E96B18D34D0A00F9E338 /* SenTestingKitAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestingKitAsync.h; sourceTree = "<group>"; };
+		2440E96C18D34D0A00F9E338 /* SenTestingKitAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestingKitAsync.m; sourceTree = "<group>"; };
 		2458930118BF910800C8A4C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		2458930518BF910800C8A4C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2458930618BF910800C8A4C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -140,6 +144,12 @@
 		246F5C1018BB9D610034AED1 /* skerseGameInfoParseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = skerseGameInfoParseOperation.m; sourceTree = "<group>"; };
 		246F5C1318BB9E630034AED1 /* skerseGameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = skerseGameInfo.h; path = skerseGameInfo/skerseGameInfo.h; sourceTree = "<group>"; };
 		246F5C1418BB9E630034AED1 /* skerseGameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = skerseGameInfo.m; path = skerseGameInfo/skerseGameInfo.m; sourceTree = "<group>"; };
+		24DD9C6A18D13524009D6CCF /* Clicky Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Clicky Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DD9C6B18D13524009D6CCF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		24DD9C7118D13524009D6CCF /* Clicky Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clicky Tests-Info.plist"; sourceTree = "<group>"; };
+		24DD9C7318D13524009D6CCF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		24DD9C7518D13524009D6CCF /* Clicky_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Clicky_Tests.m; sourceTree = "<group>"; };
+		24DD9C7718D13524009D6CCF /* Clicky Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clicky Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,13 +164,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		241E879818B65622002BD8FB /* Frameworks */ = {
+		24DD9C6718D13524009D6CCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241E879D18B65622002BD8FB /* XCTest.framework in Frameworks */,
-				241E879F18B65622002BD8FB /* UIKit.framework in Frameworks */,
-				241E879E18B65622002BD8FB /* Foundation.framework in Frameworks */,
+				24DD9C6C18D13524009D6CCF /* SenTestingKit.framework in Frameworks */,
+				24DD9C6E18D13524009D6CCF /* UIKit.framework in Frameworks */,
+				24DD9C6D18D13524009D6CCF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +182,7 @@
 			children = (
 				241E87F818B6C42B002BD8FB /* Constants.h */,
 				241E877B18B65622002BD8FB /* Clicky */,
-				241E87A218B65622002BD8FB /* ClickyTests */,
+				24DD9C6F18D13524009D6CCF /* Clicky Tests */,
 				241E877218B65622002BD8FB /* Frameworks */,
 				241E877118B65622002BD8FB /* Products */,
 			);
@@ -182,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				241E877018B65622002BD8FB /* Clicky.app */,
-				241E879B18B65622002BD8FB /* ClickyTests.xctest */,
+				24DD9C6A18D13524009D6CCF /* Clicky Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +206,7 @@
 				241E877918B65622002BD8FB /* SpriteKit.framework */,
 				241E879C18B65622002BD8FB /* XCTest.framework */,
 				2458930118BF910800C8A4C3 /* Cocoa.framework */,
+				24DD9C6B18D13524009D6CCF /* SenTestingKit.framework */,
 				2458930418BF910800C8A4C3 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -204,6 +215,8 @@
 		241E877B18B65622002BD8FB /* Clicky */ = {
 			isa = PBXGroup;
 			children = (
+				2440E96618D340A800F9E338 /* GTMCodeCoverageApp.h */,
+				2440E96718D340A800F9E338 /* GTMCodeCoverageApp.m */,
 				246F5C1218BB9E4F0034AED1 /* skerseGameInfo */,
 				242F0EF718BAF53D00AA620F /* skersePlayer */,
 				241E87F418B65BAC002BD8FB /* skerseRegionManager */,
@@ -231,24 +244,6 @@
 				241E877E18B65622002BD8FB /* InfoPlist.strings */,
 				241E878118B65622002BD8FB /* main.m */,
 				241E878318B65622002BD8FB /* Clicky-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		241E87A218B65622002BD8FB /* ClickyTests */ = {
-			isa = PBXGroup;
-			children = (
-				241E87A818B65622002BD8FB /* ClickyTests.m */,
-				241E87A318B65622002BD8FB /* Supporting Files */,
-			);
-			path = ClickyTests;
-			sourceTree = "<group>";
-		};
-		241E87A318B65622002BD8FB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				241E87A418B65622002BD8FB /* ClickyTests-Info.plist */,
-				241E87A518B65622002BD8FB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -382,6 +377,28 @@
 			name = skerseGameInfo;
 			sourceTree = "<group>";
 		};
+		24DD9C6F18D13524009D6CCF /* Clicky Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2440E96B18D34D0A00F9E338 /* SenTestingKitAsync.h */,
+				2440E96C18D34D0A00F9E338 /* SenTestingKitAsync.m */,
+				2440E96918D340B000F9E338 /* GTMCodeCoverageTestsST.m */,
+				24DD9C7518D13524009D6CCF /* Clicky_Tests.m */,
+				24DD9C7018D13524009D6CCF /* Supporting Files */,
+			);
+			path = "Clicky Tests";
+			sourceTree = "<group>";
+		};
+		24DD9C7018D13524009D6CCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24DD9C7118D13524009D6CCF /* Clicky Tests-Info.plist */,
+				24DD9C7218D13524009D6CCF /* InfoPlist.strings */,
+				24DD9C7718D13524009D6CCF /* Clicky Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,23 +419,23 @@
 			productReference = 241E877018B65622002BD8FB /* Clicky.app */;
 			productType = "com.apple.product-type.application";
 		};
-		241E879A18B65622002BD8FB /* ClickyTests */ = {
+		24DD9C6918D13524009D6CCF /* Clicky Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 241E87AF18B65622002BD8FB /* Build configuration list for PBXNativeTarget "ClickyTests" */;
+			buildConfigurationList = 24DD9C7A18D13524009D6CCF /* Build configuration list for PBXNativeTarget "Clicky Tests" */;
 			buildPhases = (
-				241E879718B65622002BD8FB /* Sources */,
-				241E879818B65622002BD8FB /* Frameworks */,
-				241E879918B65622002BD8FB /* Resources */,
+				24DD9C6618D13524009D6CCF /* Sources */,
+				24DD9C6718D13524009D6CCF /* Frameworks */,
+				24DD9C6818D13524009D6CCF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				241E87A118B65622002BD8FB /* PBXTargetDependency */,
+				24DD9C7918D13524009D6CCF /* PBXTargetDependency */,
 			);
-			name = ClickyTests;
-			productName = ClickyTests;
-			productReference = 241E879B18B65622002BD8FB /* ClickyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "Clicky Tests";
+			productName = "Clicky Tests";
+			productReference = 24DD9C6A18D13524009D6CCF /* Clicky Tests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -430,7 +447,10 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Skerse Productions";
 				TargetAttributes = {
-					241E879A18B65622002BD8FB = {
+					241E876F18B65622002BD8FB = {
+						DevelopmentTeam = LW8G2YK29M;
+					};
+					24DD9C6918D13524009D6CCF = {
 						TestTargetID = 241E876F18B65622002BD8FB;
 					};
 				};
@@ -449,7 +469,7 @@
 			projectRoot = "";
 			targets = (
 				241E876F18B65622002BD8FB /* Clicky */,
-				241E879A18B65622002BD8FB /* ClickyTests */,
+				24DD9C6918D13524009D6CCF /* Clicky Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -467,11 +487,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		241E879918B65622002BD8FB /* Resources */ = {
+		24DD9C6818D13524009D6CCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241E87A718B65622002BD8FB /* InfoPlist.strings in Resources */,
+				24DD9C7418D13524009D6CCF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +517,7 @@
 				241E87BC18B658AC002BD8FB /* skerseRegion.m in Sources */,
 				241E87BB18B658AC002BD8FB /* skersePixel.m in Sources */,
 				241E87EB18B658B8002BD8FB /* unpack.c in Sources */,
+				2440E96818D340A800F9E338 /* GTMCodeCoverageApp.m in Sources */,
 				241E878F18B65622002BD8FB /* skerseViewController.m in Sources */,
 				246F5C1518BB9E630034AED1 /* skerseGameInfo.m in Sources */,
 				246F5C1118BB9D610034AED1 /* skerseGameInfoParseOperation.m in Sources */,
@@ -510,21 +531,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		241E879718B65622002BD8FB /* Sources */ = {
+		24DD9C6618D13524009D6CCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				241E87A918B65622002BD8FB /* ClickyTests.m in Sources */,
+				2440E96D18D34D0A00F9E338 /* SenTestingKitAsync.m in Sources */,
+				2440E96A18D340B000F9E338 /* GTMCodeCoverageTestsST.m in Sources */,
+				24DD9C7618D13524009D6CCF /* Clicky_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		241E87A118B65622002BD8FB /* PBXTargetDependency */ = {
+		24DD9C7918D13524009D6CCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 241E876F18B65622002BD8FB /* Clicky */;
-			targetProxy = 241E87A018B65622002BD8FB /* PBXContainerItemProxy */;
+			targetProxy = 24DD9C7818D13524009D6CCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,10 +576,10 @@
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
-		241E87A518B65622002BD8FB /* InfoPlist.strings */ = {
+		24DD9C7218D13524009D6CCF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				241E87A618B65622002BD8FB /* en */,
+				24DD9C7318D13524009D6CCF /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -581,14 +604,18 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"GTM_IS_COVERAGE_BUILD=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -621,10 +648,13 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -643,10 +673,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clicky/Clicky-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "Clicky/Clicky-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -657,54 +694,65 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clicky/Clicky-Prefix.pch";
 				INFOPLIST_FILE = "Clicky/Clicky-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		241E87B018B65622002BD8FB /* Debug */ = {
+		24DD9C7B18D13524009D6CCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clicky.app/Clicky";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Findaway World (LW8G2YK29M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Findaway World (LW8G2YK29M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Clicky/Clicky-Prefix.pch";
+				GCC_PREFIX_HEADER = "Clicky Tests/Clicky Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "ClickyTests/ClickyTests-Info.plist";
+				INFOPLIST_FILE = "Clicky Tests/Clicky Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "150358D4-20DA-433A-80A7-C8D3246BCBEE";
+				SUPPORTED_PLATFORMS = iphonesimulator;
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		241E87B118B65622002BD8FB /* Release */ = {
+		24DD9C7C18D13524009D6CCF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clicky.app/Clicky";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Findaway World (LW8G2YK29M)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Findaway World (LW8G2YK29M)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Clicky/Clicky-Prefix.pch";
-				INFOPLIST_FILE = "ClickyTests/ClickyTests-Info.plist";
+				GCC_PREFIX_HEADER = "Clicky Tests/Clicky Tests-Prefix.pch";
+				INFOPLIST_FILE = "Clicky Tests/Clicky Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "150358D4-20DA-433A-80A7-C8D3246BCBEE";
+				SUPPORTED_PLATFORMS = iphonesimulator;
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -729,11 +777,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		241E87AF18B65622002BD8FB /* Build configuration list for PBXNativeTarget "ClickyTests" */ = {
+		24DD9C7A18D13524009D6CCF /* Build configuration list for PBXNativeTarget "Clicky Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				241E87B018B65622002BD8FB /* Debug */,
-				241E87B118B65622002BD8FB /* Release */,
+				24DD9C7B18D13524009D6CCF /* Debug */,
+				24DD9C7C18D13524009D6CCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
