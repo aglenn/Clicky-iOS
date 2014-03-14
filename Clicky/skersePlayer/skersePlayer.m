@@ -54,7 +54,7 @@ static skersePlayer *currentPlayer = nil;
 }
 
 -(NSString*)playerID {
-    return [NSString stringWithFormat:@"%@_%@_%@", self.red, self.green, self.blue];
+    return [NSString stringWithFormat:@"%d_%d_%d", self.red, self.green, self.blue];
 }
 
 @end
