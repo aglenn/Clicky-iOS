@@ -2,6 +2,8 @@ language: objective-c
 xcode_project: Clicky.xcodeproj
 xcode_scheme: Clicky
 xcode_sdk: iphonesimulator7.0
+before_install:
+  - sudo pip install cpp-coveralls --use-mirrors
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/TravisTest.mobileprovision.enc
   -d -a -out scripts/profile/TravisTest.mobileprovision
@@ -10,6 +12,8 @@ before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a
   -out scripts/certs/dist.p12
 - ./scripts/add-key.sh
+after_success:
+  - coveralls --exclude lib --exclude tests
 env:
   global:
   - APP_NAME="Clicky"

@@ -40,6 +40,7 @@
 		242F0EFA18BAF55B00AA620F /* skersePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 242F0EF918BAF55B00AA620F /* skersePlayer.m */; };
 		2440E96818D340A800F9E338 /* GTMCodeCoverageApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440E96718D340A800F9E338 /* GTMCodeCoverageApp.m */; };
 		2440E96A18D340B000F9E338 /* GTMCodeCoverageTestsST.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440E96918D340B000F9E338 /* GTMCodeCoverageTestsST.m */; };
+		2440E96D18D34D0A00F9E338 /* SenTestingKitAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2440E96C18D34D0A00F9E338 /* SenTestingKitAsync.m */; };
 		246F5C0E18BB8B2C0034AED1 /* skerseClickParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C0D18BB8B2C0034AED1 /* skerseClickParseOperation.m */; };
 		246F5C1118BB9D610034AED1 /* skerseGameInfoParseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C1018BB9D610034AED1 /* skerseGameInfoParseOperation.m */; };
 		246F5C1518BB9E630034AED1 /* skerseGameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 246F5C1418BB9E630034AED1 /* skerseGameInfo.m */; };
@@ -131,6 +132,8 @@
 		2440E96618D340A800F9E338 /* GTMCodeCoverageApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMCodeCoverageApp.h; path = "Clicky Tests/GTMCodeCoverageApp.h"; sourceTree = SOURCE_ROOT; };
 		2440E96718D340A800F9E338 /* GTMCodeCoverageApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMCodeCoverageApp.m; path = "Clicky Tests/GTMCodeCoverageApp.m"; sourceTree = SOURCE_ROOT; };
 		2440E96918D340B000F9E338 /* GTMCodeCoverageTestsST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMCodeCoverageTestsST.m; sourceTree = "<group>"; };
+		2440E96B18D34D0A00F9E338 /* SenTestingKitAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SenTestingKitAsync.h; sourceTree = "<group>"; };
+		2440E96C18D34D0A00F9E338 /* SenTestingKitAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SenTestingKitAsync.m; sourceTree = "<group>"; };
 		2458930118BF910800C8A4C3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		2458930518BF910800C8A4C3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		2458930618BF910800C8A4C3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -377,6 +380,8 @@
 		24DD9C6F18D13524009D6CCF /* Clicky Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2440E96B18D34D0A00F9E338 /* SenTestingKitAsync.h */,
+				2440E96C18D34D0A00F9E338 /* SenTestingKitAsync.m */,
 				2440E96918D340B000F9E338 /* GTMCodeCoverageTestsST.m */,
 				24DD9C7518D13524009D6CCF /* Clicky_Tests.m */,
 				24DD9C7018D13524009D6CCF /* Supporting Files */,
@@ -530,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2440E96D18D34D0A00F9E338 /* SenTestingKitAsync.m in Sources */,
 				2440E96A18D340B000F9E338 /* GTMCodeCoverageTestsST.m in Sources */,
 				24DD9C7618D13524009D6CCF /* Clicky_Tests.m in Sources */,
 			);

@@ -11,6 +11,7 @@
 #import "skerseRegion.h"
 #import "skersePixel.h"
 #import "skerseServerStreamCommunicator.h"
+#import "SenTestingKitAsync.h"
 
 @interface Clicky_Tests : SenTestCase
 
@@ -88,10 +89,15 @@
     STAssertNotNil(p.color, @"The color should have been created");
 }
 
--(void)testssc {
+-(void)testGameFetch {
     skerseServerStreamCommunicator *sssC = [skerseServerStreamCommunicator sharedCommunicator];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gameFetched) name:@"GameInfo" object:nil];
     [sssC fetchGameInfo:1];
-    
+    STFailAfter(10, @"Hopefully it works after 10 secs");
+}
+
+-(void)gameFetched {
+    STSuccess();
 }
 
 @end
