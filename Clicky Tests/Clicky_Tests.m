@@ -9,6 +9,8 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 #import "skerseRegion.h"
+#import "skersePixel.h"
+#import "skerseServerStreamCommunicator.h"
 
 @interface Clicky_Tests : SenTestCase
 
@@ -69,6 +71,27 @@
         }
     }
     STAssertEquals(count, pixels.count/3, @"The pixels were not loaded correctly");
+}
+
+-(void)testPixel {
+    skersePixel *p = [[skersePixel alloc] init];
+    
+    uint16_t defense = 5;
+    
+    [p setDefense:defense];
+
+    [p setRed:54];
+    [p setGreen:65];
+    [p setBlue:3];
+    
+    STAssertEquals(defense, p.defense, @"The defense of the pixel should be 5");
+    STAssertNotNil(p.color, @"The color should have been created");
+}
+
+-(void)testssc {
+    skerseServerStreamCommunicator *sssC = [skerseServerStreamCommunicator sharedCommunicator];
+    [sssC fetchGameInfo:1];
+    
 }
 
 @end
