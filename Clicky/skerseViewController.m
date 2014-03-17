@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 
+    NSLog(@"Loading view controller");
+    
     // Configure the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setupScene) name:@"GameInfo" object:nil];

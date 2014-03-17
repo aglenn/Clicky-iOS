@@ -13,7 +13,41 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    return YES;
+    
+    NSLog(@"In app del");
+
+    if (isRunningTests()) {
+        NSLog(@"Not doing any view loading because tests");
+        return TRUE;
+    }
+    
+    NSString *storyboardName;
+    if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        storyboardName = @"Main_iPhone";
+    }
+    else {
+        storyboardName = @"Main_iPad";
+    }
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+    UIViewController *vc =[storyboard instantiateInitialViewController];
+    
+    // Set root view controller and make windows visible
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
+    
+    return TRUE;
+}
+
+static BOOL isRunningTests(void)
+{
+    NSDictionary* environment = [[NSProcessInfo processInfo] environment];
+    NSString* injectBundle = environment[@"XCInjectBundle"];
+    NSString* pathExtension = [injectBundle pathExtension];
+    
+    return ([pathExtension isEqualToString:@"octest"] ||
+            [pathExtension isEqualToString:@"xctest"]);
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
