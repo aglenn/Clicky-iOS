@@ -711,8 +711,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clicky.app/Clicky";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Findaway World (LW8G2YK29M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Findaway World (LW8G2YK29M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -723,10 +723,11 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"CLICKYTESTS=1",
 				);
 				INFOPLIST_FILE = "Clicky Tests/Clicky Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "150358D4-20DA-433A-80A7-C8D3246BCBEE";
+				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -738,8 +739,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clicky.app/Clicky";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Findaway World (LW8G2YK29M)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Findaway World (LW8G2YK29M)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -749,7 +750,7 @@
 				GCC_PREFIX_HEADER = "Clicky Tests/Clicky Tests-Prefix.pch";
 				INFOPLIST_FILE = "Clicky Tests/Clicky Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "150358D4-20DA-433A-80A7-C8D3246BCBEE";
+				PROVISIONING_PROFILE = "";
 				SUPPORTED_PLATFORMS = iphonesimulator;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
