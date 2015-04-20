@@ -10,29 +10,29 @@
 	<string>Clicky</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>491FB49A-1623-48AF-A9CE-0B5B54F77895</key>
-		<string>ssh://github.com/aglenn/Clicky-iOS.git</string>
+		<key>A66C4A923D57E0FC1062B788ABDEADAFEC399711</key>
+		<string>https://github.com/aglenn/Clicky-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Clicky.xcodeproj/project.xcworkspace</string>
+	<string>Clicky.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>491FB49A-1623-48AF-A9CE-0B5B54F77895</key>
+		<key>A66C4A923D57E0FC1062B788ABDEADAFEC399711</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/aglenn/Clicky-iOS.git</string>
+	<string>https://github.com/aglenn/Clicky-iOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>491FB49A-1623-48AF-A9CE-0B5B54F77895</string>
+	<string>A66C4A923D57E0FC1062B788ABDEADAFEC399711</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>491FB49A-1623-48AF-A9CE-0B5B54F77895</string>
+			<string>A66C4A923D57E0FC1062B788ABDEADAFEC399711</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Clicky-iOS</string>
 		</dict>

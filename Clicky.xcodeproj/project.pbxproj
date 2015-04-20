@@ -419,9 +419,9 @@
 			productReference = 241E877018B65622002BD8FB /* Clicky.app */;
 			productType = "com.apple.product-type.application";
 		};
-		24DD9C6918D13524009D6CCF /* Clicky Tests */ = {
+		24DD9C6918D13524009D6CCF /* ClickyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24DD9C7A18D13524009D6CCF /* Build configuration list for PBXNativeTarget "Clicky Tests" */;
+			buildConfigurationList = 24DD9C7A18D13524009D6CCF /* Build configuration list for PBXNativeTarget "ClickyTests" */;
 			buildPhases = (
 				24DD9C6618D13524009D6CCF /* Sources */,
 				24DD9C6718D13524009D6CCF /* Frameworks */,
@@ -432,10 +432,10 @@
 			dependencies = (
 				24DD9C7918D13524009D6CCF /* PBXTargetDependency */,
 			);
-			name = "Clicky Tests";
+			name = ClickyTests;
 			productName = "Clicky Tests";
 			productReference = 24DD9C6A18D13524009D6CCF /* Clicky Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -469,7 +469,7 @@
 			projectRoot = "";
 			targets = (
 				241E876F18B65622002BD8FB /* Clicky */,
-				24DD9C6918D13524009D6CCF /* Clicky Tests */,
+				24DD9C6918D13524009D6CCF /* ClickyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -777,7 +777,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24DD9C7A18D13524009D6CCF /* Build configuration list for PBXNativeTarget "Clicky Tests" */ = {
+		24DD9C7A18D13524009D6CCF /* Build configuration list for PBXNativeTarget "ClickyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24DD9C7B18D13524009D6CCF /* Debug */,

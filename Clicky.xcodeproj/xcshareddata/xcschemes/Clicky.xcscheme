@@ -60,8 +60,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "24DD9C6918D13524009D6CCF"
-               BuildableName = "Clicky Tests.octest"
-               BlueprintName = "Clicky Tests"
+               BuildableName = "ClickyTests.octest"
+               BlueprintName = "ClickyTests"
                ReferencedContainer = "container:Clicky.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -85,7 +85,8 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "241E876F18B65622002BD8FB"
@@ -103,7 +104,8 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "241E876F18B65622002BD8FB"
